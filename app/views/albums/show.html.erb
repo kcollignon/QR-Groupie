@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @album.title %>
+</p>
+
+<p>
+  <b>Artwork file name:</b>
+  <%= @album.artwork_file_name %>
+</p>
+
+<p>
+  <b>Artwork content type:</b>
+  <%= @album.artwork_content_type %>
+</p>
+
+<p>
+  <b>Artwork file size:</b>
+  <%= @album.artwork_file_size %>
+</p>
+
+<p>
+  <b>Artwork updated at:</b>
+  <%= @album.artwork_updated_at %>
+</p>
+
+<p>
+	<b>Album Art</b><br />
+	<img src="<%= @album.artwork.url %>" />
+</p>
+<p>
+	<b>tracks in this album:</b>
+	<%= @album.tracks.each do |t| %>
+	<p><%= link_to t.name, t %></p>
+	<p><%= t.updated_at %>
+	<% end %>
+</p>
+
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>

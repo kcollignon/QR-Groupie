@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @track.name %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%= @track.song.url %>
+</p>
+
+<p><audio src="<%= @track.song.url %>" controls autoplay></audio></p>
+
+<p>Current url:  <%= request.url %></p>
+
+<p>QR Code to this page:</p>
+<iframe src="<%= @qr_code %>" width="150" height="150" style="border:0;">
+</iframe>
+
+<p>
+<%= link_to 'Edit', edit_track_path(@track) %> |
+<%= link_to 'Back', tracks_path %>

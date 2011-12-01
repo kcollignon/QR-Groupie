@@ -1,0 +1,31 @@
+<h1>Listing albums</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Artwork file name</th>
+    <th>Artwork content type</th>
+    <th>Artwork file size</th>
+    <th>Artwork updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @albums.each do |album| %>
+  <tr>
+    <td><%= album.title %></td>
+    <td><%= album.artwork_file_name %></td>
+    <td><%= album.artwork_content_type %></td>
+    <td><%= album.artwork_file_size %></td>
+    <td><%= album.artwork_updated_at %></td>
+    <td><%= link_to 'Show', album %></td>
+    <td><%= link_to 'Edit', edit_album_path(album) %></td>
+    <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Album', new_album_path %>
