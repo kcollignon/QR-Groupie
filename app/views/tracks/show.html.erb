@@ -12,6 +12,25 @@
 
 <p><audio src="<%= @track.song.url %>" controls autoplay></audio></p>
 
+<p>
+	<audio id="1" src="<%= @track.song.url %>" type="audio/mp3" controls="controls"></audio>
+</p>
+
+<p>
+<script>
+    $('audio').mediaelementplayer();
+</script>
+</p>
+
+<script>
+// JavaScript object for later use
+var player = new MediaElementPlayer('#player',/* Options */);
+// ... more code ...
+player.pause();
+player.setSrc('<%= @track.song.url %>');
+player.play();
+</script>
+
 <p>Current url:  <%= request.url %></p>
 
 <p>QR Code to this page:</p>
@@ -21,3 +40,5 @@
 <p>
 <%= link_to 'Edit', edit_track_path(@track) %> |
 <%= link_to 'Back', tracks_path %>
+
+
