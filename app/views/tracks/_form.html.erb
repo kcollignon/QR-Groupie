@@ -19,7 +19,8 @@
     <%= f.file_field :song %>
   </div>
   <div class="field">
-    <%= collection_select(:track, :album_id, Album.all, :id, :title) %>
+    <%= f.label :album %>
+    <%= select_tag "track[album_id]", options_from_collection_for_select(Album.all,"id","title") %>
   </div>
 
   <div class="actions">

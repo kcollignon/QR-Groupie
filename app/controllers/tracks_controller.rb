@@ -16,8 +16,8 @@ class TracksController < ApplicationController
     @track = Track.find(params[:id])
     
     qr_base = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl="
-    qr_link = request.url
-    @qr_code = qr_base + request.url
+    qr_link = @track.song.url
+    @qr_code = qr_base + qr_link
 
     respond_to do |format|
       format.html # show.html.erb
