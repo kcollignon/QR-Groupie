@@ -1,0 +1,39 @@
+/*----- COLOR SCHEME -----*/
+$headings : #9e1f63;
+$text : #3f3f3f;
+$links : #7ab4d0;
+$links-hover : #fff;
+$main-nav : #fff;
+$purple : #9E0B47;
+/* TABS COLORS */
+$tabs-bg : #ddd;
+$tabs-text : #ccc;
+$tabs-text-hover : #7ab4d0;
+
+/*----- MIXINS -----*/
+@mixin box-shadow-hex($properties) {
+  -webkit-box-shadow: $properties;
+  -moz-box-shadow: $properties;
+  -o-box-shadow: $properties;
+	box-shadow: $properties;
+}
+@mixin box-shadow-rgba($properties) {
+  -webkit-box-shadow: $properties;
+  -moz-box-shadow: $properties;
+  -o-box-shadow: $properties;
+	box-shadow: $properties;
+}
+@mixin border-radius($properties) {
+  -webkit-border-radius: $properties;
+  -moz-border-radius: $properties;
+  -o-border-radius: $properties;
+  border-radius: $properties;
+}
+
+/*---- UTILITIES ----*/
+.tuck {
+  margin-left: -10000px;
+  text-indent: -10000px;
+}
+
+

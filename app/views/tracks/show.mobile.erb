@@ -1,0 +1,10 @@
+<div id="mobile_wrapper">
+	<h2 class="track-name"><%= @track.name %></h2>
+	<h3 class="album-title"><%= @track.album.title %></h3>
+
+	<p><%= image_tag "#{@track.album.artwork.url(:mobile)}" %></p>
+
+	<p><%= link_to image_tag('mobile-play.png'), @track.song.url %></p>
+
+
+</div>

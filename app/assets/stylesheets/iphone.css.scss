@@ -1,0 +1,38 @@
+@import "css-inc.css.scss";
+
+@media screen and (orientation:portrait) {
+
+
+    html{
+  background: url(bg.png);
+  padding:0;
+  margin:0;
+}
+
+    #mobile_wrapper {text-align:center;}
+
+}
+
+.track-name {color: $headings;font-size:3.0em;font-family:Helvetica, Arial, Sans-Serif;margin:0;}
+.album-title {color: #7c7a7b;font-size:1.0em;font-family:Georgia, Verdana, Times, Arial;font-style:italic;font-weight:normal;margin:0;}
+
+/* Landscape */
+
+@media screen and (orientation:landscape) {
+
+
+
+    html{
+  background: url(bg.png);
+  padding:0;
+  margin:0;
+}
+
+    #mobile_wrapper {text-align:center;}
+
+
+}
+
+.track-name {color:$headings;font-size:30px;}
+
+

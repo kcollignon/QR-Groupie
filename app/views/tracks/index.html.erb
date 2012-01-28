@@ -1,23 +1,29 @@
-<h1>Listing tracks</h1>
+<h1>Tracks</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<table class="list clearfix">
+          <thead>
+            <tr>
+              <th class="track-title">Track Title</th>
+              <th>Album</th>
+              <th class="album-title"></th>
+              <th class="plays">Plays</th>
+              <th class="qr-code">QR Code</th>
+              <th class="view">Track Info</th>
+            </tr>
+          </thead>
+          <tbody>
 
 <% @tracks.each do |track| %>
-  <tr>
-    <td><%= track.name %></td>
-    <td><%= link_to 'Show', track %></td>
-    <td><%= link_to 'Edit', edit_track_path(track) %></td>
-    <td><%= link_to 'Destroy', track, :confirm => 'Are you sure?', :method => :delete %></td>
+  <tr class="<%= cycle('odd','even') %>">
+    <td class="track-title"><%= link_to (track.name), track %></td>
+    <td><%= image_tag "#{track.album.artwork.url(:thumb)}" %></td>
+    <td class="album-title"><%= track.album.title %></td>
+    <td class="plays">5,347</td>
+    <td class="qr-code"><%= link_to 'View', @qrcode, :class => 'view_qr', :id => "#{track.id}" %></td>
+    <td class="view"><span class="tuck"><%= link_to 'Listen', track %></span></td>
   </tr>
 <% end %>
+
+
+</tbody>
 </table>
-
-<br />
-
-<%= link_to 'New Track', new_track_path %>

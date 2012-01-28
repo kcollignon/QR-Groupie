@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bandscan</title>
-  <%= stylesheet_link_tag    "application" %>
+  <title>QR Groupie</title>
+  <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   
@@ -10,16 +10,30 @@
 </head>
 
 <body>
+<div id="site-wrapper">
+  
+    <header class="site-width">
+      <h1><a href="#"><span class="tuck">QR Groupie</span></a></h1>
+    </header><!-- /header -->
+    
+    <nav id="main-menu">
+      <ul class="site-width">
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/albums">Albums</a></li>
+        <li><a href="/tracks">Tracks</a></li>
+      </ul>
+    </nav><!-- /nav -->
+    
+    <section id="main-content" class="site-width">
+      <%= yield %>
+    </section>
+    
+  </div><!-- /#site-wrapper -->
+  
+  <footer>
+    
+  </footer>
 
-<p>
-	<% if mobile_device? %>
-	<%= link_to "Full Site", :mobile => 0 %>
-	<% else %>
-	<%= link_to "Mobile Site", :mobile => 1 %>
-	<% end %>
-</p>
-
-<%= yield %>
 
 </body>
 </html>

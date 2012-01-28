@@ -2,4 +2,11 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+$ ->
+	$('.view_qr').click (e) ->
+		e.preventDefault()
+		id = this.id
+		url = window.location.pathname
+		alert "url to the code: #{url}"
+
 
