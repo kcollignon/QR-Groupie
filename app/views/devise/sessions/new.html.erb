@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Gtroupie</title>
+
+    <%= stylesheet_link_tag "login" %>
+    <%= stylesheet_link_tag "styles" %>
+    <%= stylesheet_link_tag "css-inc" %>
+  </head>
+
+  <body class="login">
+    <div id="site-wrapper">
+      <div id="login">
+        <header class="site-width login">
+          <h1>
+            <a href="#">
+              <span class="tuck">QR GROUPIE</span>
+            </a>
+          </h1>
+        </header><!-- /header -->
+
+        <section id="main-content" class="site-width">
+          <div class="login-header">
+            <h2>Login</h2>
+          </div>
+          <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+          <div class="field-wrapper">
+            <%= f.label :email %>
+            <div class="field">
+              <%= f.email_field :email %></div>
+            </div>
+          <div class="field-wrapper">
+            <%= f.label :password %>
+            <div class="field">
+              <%= f.password_field :password, :name =>"pwd" %></div>
+          </div>
+
+          <% if devise_mapping.rememberable? -%>
+          <div>
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %></div>
+          <% end -%>
+
+          <div>
+            <%= f.submit "Sign in", :class =>"login-button" %></div>
+          <% end %>
+
+          <%= render "links" %></section>
+
+      </div>
+    </div><!-- /#site-wrapper -->
+
+        <footer></footer>
+  </body>
+</html>

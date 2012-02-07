@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Groupie</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  
+
+</head>
+
+<body>
+<div id="site-wrapper">
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+ <% if user_signed_in? %>
+  Welcome, <%= current_user.email %>! | <%= link_to :logout, destroy_user_session_path, :method => :delete %>
+<% else %>
+  New User? <%= link_to "Sign up!", new_user_registration_path %> | <%= link_to "Sign In", user_session_path %>
+<% end %>
+
+  
+    <header class="site-width">
+      <h1><a href="#"><span class="tuck">QR Groupie</span></a></h1>
+    </header><!-- /header -->
+    
+    <nav id="main-menu">
+      <ul class="site-width">
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/albums">Albums</a></li>
+        <li><a href="/tracks">Tracks</a></li>
+      </ul>
+    </nav><!-- /nav -->
+    
+    <section id="main-content" class="site-width">
+      <%= yield %>
+    </section>
+    
+  </div><!-- /#site-wrapper -->
+  
+  <footer>
+    
+  </footer>
+
+
+</body>
+</html>

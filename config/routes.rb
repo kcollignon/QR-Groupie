@@ -1,8 +1,8 @@
 Bandscan::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :sessions => "sessions" }
 
   resources :albums
-
+  resources :users
   resources :tracks
 
   # The priority is based upon order of creation:
