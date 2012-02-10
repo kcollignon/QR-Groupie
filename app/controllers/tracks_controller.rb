@@ -19,9 +19,12 @@ class TracksController < ApplicationController
     qr_link = request.url
     @qr_code = qr_base + qr_link
 
+    url = "http://www.google.com"
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @track }
+
     end
   end
 
