@@ -1,0 +1,82 @@
+@import "css-inc.css.scss";
+
+
+
+.login{
+    #login{
+      margin: 0 auto;
+	  width: 460px;
+	  padding: 100px 0 0 0;
+	  header.login{
+	    width: 460px;
+	    margin: 0 auto;
+	    padding: 0 0 30px 0;
+		  h1{
+		    margin: 0 auto;
+		    height: 112px;
+            width: 176px;
+		  }
+	  }
+	    #main-content{
+	      margin: 0 auto;
+	      width: 460px;
+	      background: $main-nav;
+	      @include border-radius(10px); 
+	      border: 1px solid $border;
+	        .login-header{
+	               background: url(login-bg.png) repeat-x; 
+	               height: 63px;
+	               display: block;
+	               @include border-radius(10px 10px 0 0);
+		            h2{
+		                display: block;
+		                margin:0;
+		                padding: 18px 0 0 50px ;
+		                color: $main-nav;
+		                font: 25px 'Yanone Kaffeesatz', Arial, sans-serif;
+		                letter-spacing: 1px;
+		                text-transform: uppercase;
+		            }
+	            }
+	        form{
+	          padding: 20px 50px;
+	            .field-wrapper{
+	              padding: 0 0 20px 0;
+	              display: block;
+	              height: 50px;
+	              clear:both;
+		            label{
+		              float:left;
+		              padding: 15px 10px 0 0;
+		              font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+		              font-size: 20px;
+		              font-weight: 700;
+		              color: #12a1dd;
+		              width: 75px;
+		              letter-spacing: 1px;
+		            }
+		            .field{
+		                float:left;
+		                background-color: #f2f2f2;
+					    border-radius: 3px;
+					    border: 1px solid #e3e3e3;
+					    display: block;
+					    height: 100%;
+					    left: -8px;
+					    padding: 5px 5px 0px 5px;
+					    top: -8px;
+					    width: 72%;
+ 						  input{
+			                width: 96%;
+			                position: relative;
+			                height: 52%;
+			              }
+		            }
+		            input.login-button{
+		              float:right;
+		            }
+		        }
+	        }
+	    }
+    }
+}

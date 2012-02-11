@@ -19,7 +19,7 @@
           </h1>
         </header><!-- /header -->
 
-        <section id="main-content" class="site-width">
+        <section id="main-content" class="site-width clearfix">
           <div class="login-header">
             <h2>Login</h2>
           </div>
@@ -27,25 +27,35 @@
           <div class="field-wrapper">
             <%= f.label :email %>
             <div class="field">
-              <%= f.email_field :email %></div>
+              <%= f.email_field :email %>
             </div>
+          </div><!-- /.field-wrapper -->
+          
           <div class="field-wrapper">
             <%= f.label :password %>
             <div class="field">
-              <%= f.password_field :password, :name =>"pwd" %></div>
-          </div>
-
+              <%= f.password_field :password, :name =>"pwd" %>
+            </div>
+          </div><!-- /.field-wrapper -->
+		
+		<div class="remember">	
           <% if devise_mapping.rememberable? -%>
+       
           <div>
             <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %></div>
+            <%= f.label :remember_me %>
+          </div>
           <% end -%>
-
-          <div>
-            <%= f.submit "Sign in", :class =>"login-button" %></div>
+		 </div> <!-- /.remember -->
+          <div class="login clearfix">
+            <%= f.submit "Sign in", :class =>"login-button" %>
+          </div>
           <% end %>
 
-          <%= render "links" %></section>
+        <!--<div class="forgot-stuff">
+          <%= render "links" %>
+        </div>-->
+       </section>
 
       </div>
     </div><!-- /#site-wrapper -->
