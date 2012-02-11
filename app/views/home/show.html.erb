@@ -2,5 +2,5 @@
 <p>Currently there is nothing to show here on the dashboard. So right now we are showing all the users (<%= @users.count %>) in the system.</p>
 
 <% @users.each do |u| %>
-<p>- <%= u.email %></p>
+<p>- <b><%= u.first_name %></b> <b><%= u.last_name %></b> | <%= u.email %></p>
 <% end %>
