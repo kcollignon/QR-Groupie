@@ -1,2 +1,6 @@
 <p>Hey>
 <p>these are the users:</p>
+
+<% @users.each do |u| %>
+<p><%= u.email %></p>
+<% end %>
