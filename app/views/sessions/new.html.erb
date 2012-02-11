@@ -13,20 +13,19 @@
     <div id="site-wrapper">
       <div id="login">
         <header class="site-width login">
-          <h1>
+          <h1 align="center">
             <a href="<%= request.url %>">
               <span class="tuck">QR GROUPIE</span>
             </a>
           </h1>
         </header><!-- /header -->
-
+        <div>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
         <section id="main-content" class="site-width clearfix">
           <div class="login-header">
             <h2>Login</h2>
-            <div>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-</div>
           </div>
           <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
           <div class="field-wrapper">
@@ -39,7 +38,7 @@
           <div class="field-wrapper">
             <%= f.label :password %>
             <div class="field">
-              <%= f.password_field :password, :name =>"pwd" %>
+              <%= f.password_field :password %>
             </div>
           </div><!-- /.field-wrapper -->
 		

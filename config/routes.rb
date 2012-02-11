@@ -1,9 +1,14 @@
 Bandscan::Application.routes.draw do
-  devise_for :users, :controllers => { :sessions => "sessions" }
+  devise_for :users, :controllers => { :sessions => :sessions }
 
   resources :albums
   resources :users
   resources :tracks
+
+  #authentication stuff
+  match '/tracks' => "tracks#index", :as => :user_root
+  match '/users/sign_out' => "sessions#new"
+  match '/users/sign_in' => "sessions#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
