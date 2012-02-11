@@ -3,7 +3,14 @@ class ApplicationController < ActionController::Base
 
   before_filter :prepare_for_mobile
 
+
+
+
   private
+
+  def after_sign_in_path_for(resource_or_scope)
+  signed_in_root_path(resource_or_scope)
+end
 
   def mobile_device?
   	if session[:mobile_param]

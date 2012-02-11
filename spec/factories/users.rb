@@ -1,6 +1,9 @@
 # Read about factories at http://github.com/thoughtbot/factory_girl
 
-FactoryGirl.define do
-  factory :user do
-  end
+require 'factory_girl'
+
+Factory.define :user do |u|
+  u.name 'Test User'
+  u.email 'user@test.com'
+  u.password 'please'
 end

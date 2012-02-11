@@ -23,6 +23,10 @@
         <section id="main-content" class="site-width clearfix">
           <div class="login-header">
             <h2>Login</h2>
+            <div>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+</div>
           </div>
           <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
           <div class="field-wrapper">
