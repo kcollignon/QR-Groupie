@@ -1,4 +1,7 @@
 class TracksController < ApplicationController
+
+  before_filter :authenticate_user!
+  
   # GET /tracks
   # GET /tracks.json
   def index

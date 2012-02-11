@@ -21,7 +21,7 @@
       <h1><a href="#"><span class="tuck">QR Groupie</span></a></h1>
       <div id="user_links">
         <% if user_signed_in? %>
-          Welcome, <%= current_user.email %>! | <%= link_to :logout, destroy_user_session_path, :method => :delete %>
+          Welcome, <%= current_user.email %>! | <%= link_to "My Profile", edit_user_registration_path %> | <%= link_to :logout, destroy_user_session_path, :method => :delete %>
         <% else %>
           New User? <%= link_to "Sign up!", new_user_registration_path %> | <%= link_to "Sign In", user_session_path %>
         <% end %>
