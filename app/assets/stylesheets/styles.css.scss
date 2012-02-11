@@ -83,6 +83,13 @@ ol li ol {
   margin: 0 0 10px 20px;
 }
 
+/*----- Site Links -----*/
+
+#user_links {
+	width:300px;
+	float:right;
+}
+
 /*----- FORMS -----*/
 form {
   input, textarea, label.compact-form-label{
@@ -234,12 +241,13 @@ nav {
 
 /*----- HEADER -----*/
 header {
+	height:120px;
   h1 {
     a {
       background: url(qr-logo.png) no-repeat;
-      display: block;
       height: 112px;
       width: 176px;
+      float: left;
     }
   }
 }/* /#masthead */

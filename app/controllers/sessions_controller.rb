@@ -1,17 +1,15 @@
 class SessionsController < Devise::SessionsController
 
-  layout nil
+layout nil
+	
+def create
+ logger.info "Attempt to sign in by #{ params[:user][:email] }"
+super
+end
 
-  def new
-    super
-  end
+def destroy
+ logger.info "#{ current_user.email } signed out"
+  super
+end
 
-  def create
-    # add custom create logic here
-    
-  end
-
-  def update
-    super
-  end
 end 

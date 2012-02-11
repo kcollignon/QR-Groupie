@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def after_sign_out_path_for(resource_or_scope)
+  # logic here
+  new_user_session_path
+end
+
   def mobile_device?
   	if session[:mobile_param]
   		session[:mobile_param] == "1"

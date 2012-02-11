@@ -21,11 +21,12 @@ end
 gem 'jquery-rails'
 gem 'paperclip', '~> 2.4'
 gem 'aws-s3'
-gem 'rspec-rails'
-gem 'factory_girl_rails'
 gem 'cucumber-rails'
 gem 'capybara'
 gem 'devise'
+gem 'rspec-rails', :group => [:development, :test]
+gem 'database_cleaner', :group => :test
+gem 'factory_girl_rails', :group => :test
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
