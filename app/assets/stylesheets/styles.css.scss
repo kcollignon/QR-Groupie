@@ -12,7 +12,7 @@ html{
 
 /*----- TEXT -----*/
 h1, h2, h3, h4, h5, h5, h6 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   color: $headings;
   font-weight: normal;
   margin: 25px 0 10px;
@@ -45,7 +45,7 @@ h6 a:hover, h6 a:active {
 
 p, div {
   color: $text;
-  font: 16px/22px 'Yanone Kaffeesatz', sans-serif;
+  font: 16px/22px 'PT Sans', sans-serif;
 }
 p {
   margin: 0 10px 20px;
@@ -60,7 +60,7 @@ a:hover, a:active, .nolink:hover {
 
 /*----- LISTS -----*/
 ul {
-  font: 16px/22px 'Yanone Kaffeesatz', sans-serif;
+  font: 16px/22px 'PT Sans', sans-serif;
   list-style-image: url(bullet-list.png);
   margin: 0 0 20px 20px;
   padding-left: 10px;
@@ -72,7 +72,7 @@ ul li ul {
   margin: 0 5px 0 20px;
 }
 ol {
-  font: 16px/22px 'Yanone Kaffeesatz', sans-serif;
+  font: 16px/22px 'PT Sans', sans-serif;
   margin: 0 0 20px 20px;
   padding-left: 10px;
 }
@@ -97,7 +97,7 @@ form {
      background-color: #fff;
      color: #3f3f3f;
      display: block;
-     font: 16px/22px 'Yanone Kaffeesatz', sans-serif;
+     font: 16px/22px 'PT Sans', sans-serif;
      margin: 0 0 3px;
      outline: medium none;
      padding: 8px 3px 8px 5px;
@@ -193,7 +193,7 @@ form {
 
 body{
 
-	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	padding:0;
 	margin:0;
 }
