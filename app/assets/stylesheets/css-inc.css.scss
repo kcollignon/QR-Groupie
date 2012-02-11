@@ -2,9 +2,11 @@
 $headings : #9e1f63;
 $text : #3f3f3f;
 $links : #7ab4d0;
+$purple: #9e0b47;
 $links-hover : #fff;
 $main-nav : #fff;
-$purple : #9E0B47;
+$border: #d6d6d6;
+$accent: #179cd4;
 /* TABS COLORS */
 $tabs-bg : #ddd;
 $tabs-text : #ccc;
@@ -36,4 +38,6 @@ $tabs-text-hover : #7ab4d0;
   text-indent: -10000px;
 }
 
-
+.clearfix{
+  clear:both;
+}
