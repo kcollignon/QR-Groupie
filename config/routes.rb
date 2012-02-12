@@ -1,7 +1,7 @@
 Bandscan::Application.routes.draw do
   get "home/show"
 
-  devise_for :users, :controllers => { :sessions => :sessions }
+  devise_for :users, :controllers => { :sessions => "sessions", :passwords => "passwords" }
 
   resources :albums
   resources :users

@@ -29,9 +29,9 @@
           </div>
           <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
           <div class="field-wrapper">
-            <%= f.label :email %>
+            <%= f.label :login %>
             <div class="field">
-              <%= f.email_field :email %>
+              <%= f.text_field :login %>
             </div>
           </div><!-- /.field-wrapper -->
           

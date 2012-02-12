@@ -7,7 +7,9 @@ Devise.setup do |config|
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-config.sign_out_via = Rails.env.test? ? :get : :delete
+  config.sign_out_via = Rails.env.test? ? :get : :delete
+
+  config.authentication_keys = [ :login ]
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
