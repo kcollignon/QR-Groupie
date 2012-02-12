@@ -106,7 +106,39 @@ form {
      -moz-border-radius: 4px;
      -o-border-radius: 4px;
      border-radius: 4px;
+	    
 	  }
+	   .field-wrapper{
+          padding: 0 0 20px 0;
+          display: block;
+          height: auto;
+          clear:both;
+            label{
+              clear:both;
+              padding: 15px 10px 0 0;
+              font-family: 'PT Sans', Arial, sans-serif;
+              font-size: 18px;
+              font-weight: 700;
+              color: #12a1dd;
+              
+            }
+	        .field{
+	            background-color: #f2f2f2;
+			    border-radius: 3px;
+			    border: 1px solid #e3e3e3;
+			    display: block;
+			    height: 100%;
+			    left: -8px;
+			    padding: 5px 5px 0px 5px;
+			    top: -8px;
+			    width: 72%;
+			       input{
+	                 width: 96%;
+	                 position: relative;
+	                 height: 52%;
+	               }
+		    }
+	   }
   label.compact-form-label, label {
 		background: none;
 		border: none;
