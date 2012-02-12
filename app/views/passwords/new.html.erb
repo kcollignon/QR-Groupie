@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Gtroupie</title>
+
+    <%= stylesheet_link_tag "login" %>
+    <%= stylesheet_link_tag "styles" %>
+    <%= stylesheet_link_tag "css-inc" %>
+    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=PT+Sans:400,700" %>
+  </head>
+<body>
+<h2>Forgot your password?</h2>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.submit "Send me reset password instructions" %></div>
+<% end %>
+
+<%= render "links" %>
+</body>
+</html>
