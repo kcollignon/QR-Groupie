@@ -113,7 +113,8 @@ form {
 		margin-top: 3px;
 		box-shadow: none;
 		padding: 8px 3px 8px 5px;
-		font: 18px/22px "Yanone Kaffeesatz", Arial, sans-serif;
+		font: 18px/22px 'PT Sans', Arial, sans-serif;
+		color: #12A1DD;
 	}
 	input[type="submit"] {
 	  background: url(alert-overlay.png) repeat-x;
@@ -122,15 +123,14 @@ form {
 	  color: white;
 	  cursor: pointer;
 	  display: inline-block;
-	  font: 18px/22px "Yanone Kaffeesatz", Arial, sans-serif;
+	  font: 18px/22px 'PT Sans', Arial, sans-serif;
 	  font-style: normal;
-	  font-weight: normal;
+	  font-weight: 700;
 	  text-transform: uppercase;
-	  letter-spacing: 1px;
 	  line-height: 1;
 	  margin: 0;
 	  overflow: visible;
-	  padding: 9px 15px 10px;
+	  padding: 9px 15px;
 	  position: relative;
 	  text-align: left;
 	  text-decoration: none;
@@ -147,7 +147,7 @@ form {
 	  float: right;
 	  text-shadow: 0 -1px 0 #024764;
 	  &:hover {
-	     background-color: #036d90;
+	     background-color: #1c8ab8;
 		  -webkit-box-shadow: inset 0 1px 2px black;
 		  -moz-box-shadow: inset 0 1px 2px black;
 		  -o-box-shadow: inset 0 1px 2px black;
@@ -157,31 +157,6 @@ form {
 	  &:active {
 	    -moz-transform: translateY(1px);
 	  }
-	}
-	 .remember{
-	   padding: 10px 0;
-	   display: block;
-	    #user_remember_me{
-	      float:left;
-	    }
-	    label{
-	      float:left;
-	      display: block;
-	      padding: 0 0 0 5px;
-	      color: #179cd4;
-	      font-size: 14px;
-	      margin:0;
-	    }
-	      
-	}
-	.forgot-stuff{
-	  display: block;
-	    
-	}
-	.login{
-	  clear:both;
-	  display: block;
-	  height: 40px;
 	}
 }
 

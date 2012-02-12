@@ -10,7 +10,7 @@
 	  header.login{
 	    width: 460px;
 	    margin: 0 auto;
-	    padding: 0 0 30px 0;
+	    padding:0 0 30px 0;
 		  h1{
 		    margin: 0 auto;
 		    height: 112px;
@@ -19,6 +19,7 @@
 	  }
 	    #main-content{
 	      margin: 0 auto;
+	      padding: 0 0 20px 0;
 	      width: 460px;
 	      background: $main-nav;
 	      @include border-radius(10px); 
@@ -34,8 +35,9 @@
 		                padding: 18px 0 0 50px ;
 		                color: $main-nav;
 		                font: 25px 'PT Sans', Arial, sans-serif;
-		                letter-spacing: 1px;
+		                font-weight: 400;
 		                text-transform: uppercase;
+		                text-shadow: 0 1px 0 #570010;
 		            }
 	            }
 	        form{
@@ -49,11 +51,10 @@
 		              float:left;
 		              padding: 15px 10px 0 0;
 		              font-family: 'PT Sans', Arial, sans-serif;
-		              font-size: 20px;
+		              font-size: 18px;
 		              font-weight: 700;
 		              color: #12a1dd;
 		              width: 75px;
-		              letter-spacing: 1px;
 		            }
 		            .field{
 		                float:left;
@@ -76,7 +77,55 @@
 		              float:right;
 		            }
 		        }
-	        }
+		    }
 	    }
+	    .remember{
+	      float:left;
+	      padding: 10px 0;
+		  display: block;
+		   color: #12A1DD;
+		    #user_remember_me{
+			  margin:5px 0 0 0;
+			  float: left;
+			}
+			input{
+			  margin: 0;
+			  padding: 0;
+			}
+			label{
+			  font-size: 14px;
+			  margin: 0;
+			  padding: 0 0 0 10px;
+			}
+	    }
+	    .forgot-stuff{
+	      padding: 10px 0 20px;
+	      margin: 0 auto;
+	      width: 220px;
+            .sign-up{
+              float: left;
+            }
+            .forgot-password{
+              float:left;
+              margin: 0 0 0 10px;
+              border-left: 1px solid #969696;
+              padding: 0 0 0 10px;
+            }
+            a{
+              color: #969696;
+              font-family: 'PT Sans', Arial, sans-serif;
+              font-size: 14px;
+                &:link, &.visited{
+                  text-decoration: none;
+                }
+                &:hover, &:active{
+                  text-decoration: underline;
+                }
+            }
+        }
     }
 }
+
+
+
+
