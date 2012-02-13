@@ -2,5 +2,6 @@
 <p>these are the users:</p>
 
 <% @users.each do |u| %>
-<p><%= u.email %></p>
+<p><%= link_to u.email, "/users/#{u.username}" %></p>
+<p><%= u.id %></p>
 <% end %>
